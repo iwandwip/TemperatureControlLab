@@ -17,23 +17,27 @@ int alarmStatus;          // hi temperature alarm status
 boolean newData = false;  // boolean flag indicating new command
 int n = 10;               // number of samples for each temperature measurement
 
-// arduino startup
+// esp32 startup
 void setup() {
   // analogReference(EXTERNAL); // set analog reference to aref pin (0 - 5V only)
   // while (!Serial) {
   //   ;  // wait for serial port to connect.
   // }
   Serial.begin(baud);
-  if (DEBUG) Serial.println("begin(baud)");
+  if (DEBUG) {
+    Serial.println("begin(baud)");
+  }
   Serial.flush();
-  if (DEBUG) Serial.println("systemInit");
+  if (DEBUG) {
+    Serial.println("systemInit");
+  }
   systemInit();
   setHeater1(0);
   setHeater2(0);
   ledTimeout = millis() + 1000;
 }
 
-// arduino main event loop
+// esp32 main event loop
 void loop() {
   readCommand();
   if (DEBUG) echoCommand();
@@ -41,4 +45,10 @@ void loop() {
   dispatchCommand();
   checkAlarm();
   updateStatus();
+
+  // for (uint8_t i = 0; i < 255; i++) {
+  //   analogWritePWM(pinLED1, i);
+  //   delay(30);
+  //   Serial.println(i);
+  // }
 }

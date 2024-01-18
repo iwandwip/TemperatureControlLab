@@ -111,6 +111,6 @@ const int hiLED = 60;          // hi LED
 const int loLED = hiLED / 16;  // lo LED
 
 // setting PWM properties
-const int freq = 5000;  // default arduino 490hz
+const int freq = 1000;  // default arduino 490hz
 const int ledChannel = 0;
 const int resolution = 8;

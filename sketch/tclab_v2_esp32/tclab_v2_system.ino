@@ -4,11 +4,12 @@ inline float readTemperature(int pin) {
   for (int i = 0; i < n; i++) {
     uint16_t adcRead = map(analogRead(pin), 0, 4095, 0, 1023);
     adcRead = (adcRead < 0) ? 0 : adcRead;
+
     degC += adcRead * 0.322265625 - 50.0;  // use for 3.3v AREF
     //degC += analogRead(pin) * 0.170898438 - 50.0;  // use for 1.75v AREF
   }
-  // return degC / float(n);
-  return analogRead(pin);  // for debugging only
+  return degC / float(n);
+  // return analogRead(pin);  // for debugging only
 }
 
 void checkAlarm(void) {
