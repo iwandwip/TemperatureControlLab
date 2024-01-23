@@ -6353,13 +6353,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pin name="5V" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
 <text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
 </symbol>
-<symbol name="3.3V">
-<description>&lt;h3&gt;3.3V Voltage Supply&lt;/h3&gt;</description>
-<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
-<pin name="3.3V" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
-<text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
-</symbol>
 </symbols>
 <devicesets>
 <deviceset name="5V" prefix="SUPPLY">
@@ -6367,20 +6360,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 &lt;p&gt;Power supply symbol for a specifically-stated 5V source.&lt;/p&gt;</description>
 <gates>
 <gate name="G$1" symbol="5V" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="3.3V" prefix="SUPPLY">
-<description>&lt;h3&gt;3.3V Supply Symbol&lt;/h3&gt;
-&lt;p&gt;Power supply symbol for a specifically-stated 3.3V source.&lt;/p&gt;</description>
-<gates>
-<gate name="G$1" symbol="3.3V" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -8632,15 +8611,12 @@ Source: &lt;a href="https://datasheet.datasheetarchive.com/originals/distributor
 <part name="GND2" library="SparkFun" deviceset="GND" device=""/>
 <part name="SUPPLY2" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
 <part name="GND3" library="SparkFun" deviceset="GND" device=""/>
-<part name="SUPPLY3" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="GND4" library="SparkFun" deviceset="GND" device=""/>
-<part name="SUPPLY4" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="GND5" library="SparkFun" deviceset="GND" device=""/>
 <part name="SUPPLY5" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
 <part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
 <part name="GND6" library="SparkFun" deviceset="GND" device=""/>
 <part name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="5MM" package3d_urn="urn:adsk.eagle:package:15799/2"/>
-<part name="SUPPLY7" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="GND7" library="SparkFun" deviceset="GND" device=""/>
 <part name="RT1" library="TMP36GT9Z" deviceset="TMP36GT9Z" device=""/>
 <part name="RT2" library="TMP36GT9Z" deviceset="TMP36GT9Z" device=""/>
@@ -8686,14 +8662,8 @@ Source: &lt;a href="https://datasheet.datasheetarchive.com/originals/distributor
 <instance part="GND3" gate="1" x="22.86" y="45.72" smashed="yes">
 <attribute name="VALUE" x="20.32" y="43.18" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY3" gate="G$1" x="20.32" y="63.5" smashed="yes">
-<attribute name="VALUE" x="20.32" y="66.294" size="1.778" layer="96" align="bottom-center"/>
-</instance>
 <instance part="GND4" gate="1" x="55.88" y="45.72" smashed="yes">
 <attribute name="VALUE" x="53.34" y="43.18" size="1.778" layer="96"/>
-</instance>
-<instance part="SUPPLY4" gate="G$1" x="53.34" y="63.5" smashed="yes">
-<attribute name="VALUE" x="53.34" y="66.294" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="GND5" gate="1" x="-78.74" y="17.78" smashed="yes">
 <attribute name="VALUE" x="-81.28" y="15.24" size="1.778" layer="96"/>
@@ -8712,11 +8682,8 @@ Source: &lt;a href="https://datasheet.datasheetarchive.com/originals/distributor
 <attribute name="NAME" x="98.552" y="64.516" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="98.552" y="66.675" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="SUPPLY7" gate="G$1" x="-35.56" y="22.86" smashed="yes">
-<attribute name="VALUE" x="-35.56" y="25.654" size="1.778" layer="96" align="bottom-center"/>
-</instance>
-<instance part="GND7" gate="1" x="-38.1" y="-40.64" smashed="yes">
-<attribute name="VALUE" x="-40.64" y="-43.18" size="1.778" layer="96"/>
+<instance part="GND7" gate="1" x="-27.94" y="-40.64" smashed="yes">
+<attribute name="VALUE" x="-30.48" y="-43.18" size="1.778" layer="96"/>
 </instance>
 <instance part="RT1" gate="G$1" x="20.32" y="55.88" smashed="yes" rot="R180">
 <attribute name="NAME" x="1.27" y="48.26" size="1.778" layer="95" rot="R180" align="center-left"/>
@@ -8726,9 +8693,9 @@ Source: &lt;a href="https://datasheet.datasheetarchive.com/originals/distributor
 <attribute name="NAME" x="34.29" y="48.26" size="1.778" layer="95" rot="R180" align="center-left"/>
 <attribute name="VALUE" x="34.29" y="50.8" size="1.778" layer="96" rot="R180" align="center-left"/>
 </instance>
-<instance part="U1" gate="G$1" x="-55.88" y="-10.16" smashed="yes">
-<attribute name="VALUE" x="-66.04" y="-40.64" size="1.778" layer="96"/>
-<attribute name="NAME" x="-66.04" y="20.32" size="1.778" layer="95" align="top-left"/>
+<instance part="U1" gate="G$1" x="-45.72" y="-10.16" smashed="yes">
+<attribute name="VALUE" x="-55.88" y="-40.64" size="1.778" layer="96"/>
+<attribute name="NAME" x="-55.88" y="20.32" size="1.778" layer="95" align="top-left"/>
 </instance>
 </instances>
 <busses>
@@ -8780,9 +8747,9 @@ Source: &lt;a href="https://datasheet.datasheetarchive.com/originals/distributor
 </segment>
 <segment>
 <pinref part="GND7" gate="1" pin="GND"/>
-<wire x1="-38.1" y1="-38.1" x2="-38.1" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="-38.1" x2="-27.94" y2="-35.56" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="GND"/>
-<wire x1="-38.1" y1="-35.56" x2="-40.64" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="-35.56" x2="-30.48" y2="-35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="5V" class="0">
@@ -8809,24 +8776,6 @@ Source: &lt;a href="https://datasheet.datasheetarchive.com/originals/distributor
 <wire x1="-22.86" y1="58.42" x2="-20.32" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="3.3V" class="0">
-<segment>
-<pinref part="SUPPLY3" gate="G$1" pin="3.3V"/>
-<wire x1="20.32" y1="60.96" x2="20.32" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="RT1" gate="G$1" pin="VS+"/>
-</segment>
-<segment>
-<pinref part="SUPPLY4" gate="G$1" pin="3.3V"/>
-<wire x1="53.34" y1="60.96" x2="53.34" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="RT2" gate="G$1" pin="VS+"/>
-</segment>
-<segment>
-<pinref part="SUPPLY7" gate="G$1" pin="3.3V"/>
-<wire x1="-35.56" y1="15.24" x2="-35.56" y2="22.86" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="3V3"/>
-<wire x1="-40.64" y1="15.24" x2="-35.56" y2="15.24" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$3" class="0">
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
@@ -8834,48 +8783,11 @@ Source: &lt;a href="https://datasheet.datasheetarchive.com/originals/distributor
 <pinref part="LED1" gate="G$1" pin="A"/>
 </segment>
 </net>
-<net name="PIN_25" class="0">
+<net name="PIN_13" class="0">
 <segment>
-<wire x1="-40.64" y1="-12.7" x2="-38.1" y2="-12.7" width="0.1524" layer="91"/>
-<label x="-38.1" y="-12.7" size="1.016" layer="95" xref="yes"/>
-<pinref part="U1" gate="G$1" pin="D25"/>
-</segment>
-<segment>
-<wire x1="53.34" y1="58.42" x2="55.88" y2="58.42" width="0.1524" layer="91"/>
-<label x="55.88" y="58.42" size="1.016" layer="95" xref="yes"/>
-<pinref part="RT2" gate="G$1" pin="VOUT"/>
-</segment>
-</net>
-<net name="PIN_26" class="0">
-<segment>
-<wire x1="-40.64" y1="-15.24" x2="-38.1" y2="-15.24" width="0.1524" layer="91"/>
-<label x="-38.1" y="-15.24" size="1.016" layer="95" xref="yes"/>
-<pinref part="U1" gate="G$1" pin="D26"/>
-</segment>
-<segment>
-<wire x1="20.32" y1="58.42" x2="22.86" y2="58.42" width="0.1524" layer="91"/>
-<label x="22.86" y="58.42" size="1.016" layer="95" xref="yes"/>
-<pinref part="RT1" gate="G$1" pin="VOUT"/>
-<label x="22.86" y="58.42" size="1.016" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="PIN_32" class="0">
-<segment>
-<wire x1="-40.64" y1="-20.32" x2="-38.1" y2="-20.32" width="0.1524" layer="91"/>
-<label x="-38.1" y="-20.32" size="1.016" layer="95" xref="yes"/>
-<pinref part="U1" gate="G$1" pin="D32"/>
-</segment>
-<segment>
-<pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="-33.02" y1="58.42" x2="-35.56" y2="58.42" width="0.1524" layer="91"/>
-<label x="-35.56" y="58.42" size="1.016" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="PIN_33" class="0">
-<segment>
-<wire x1="-40.64" y1="-22.86" x2="-38.1" y2="-22.86" width="0.1524" layer="91"/>
-<label x="-38.1" y="-22.86" size="1.016" layer="95" xref="yes"/>
-<pinref part="U1" gate="G$1" pin="D33"/>
+<wire x1="-60.96" y1="-17.78" x2="-63.5" y2="-17.78" width="0.1524" layer="91"/>
+<label x="-63.5" y="-17.78" size="1.016" layer="95" rot="R180" xref="yes"/>
+<pinref part="U1" gate="G$1" pin="D13"/>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
@@ -8883,7 +8795,44 @@ Source: &lt;a href="https://datasheet.datasheetarchive.com/originals/distributor
 <label x="-63.5" y="58.42" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="PIN_13" class="0">
+<net name="PIN_12" class="0">
+<segment>
+<wire x1="-60.96" y1="-15.24" x2="-63.5" y2="-15.24" width="0.1524" layer="91"/>
+<label x="-63.5" y="-15.24" size="1.016" layer="95" rot="R180" xref="yes"/>
+<pinref part="U1" gate="G$1" pin="D12"/>
+</segment>
+<segment>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="-33.02" y1="58.42" x2="-35.56" y2="58.42" width="0.1524" layer="91"/>
+<label x="-35.56" y="58.42" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="PIN_14" class="0">
+<segment>
+<wire x1="20.32" y1="58.42" x2="22.86" y2="58.42" width="0.1524" layer="91"/>
+<label x="22.86" y="58.42" size="1.016" layer="95" xref="yes"/>
+<pinref part="RT1" gate="G$1" pin="VOUT"/>
+<label x="22.86" y="58.42" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<wire x1="-60.96" y1="-20.32" x2="-63.5" y2="-20.32" width="0.1524" layer="91"/>
+<label x="-63.5" y="-20.32" size="1.016" layer="95" rot="R180" xref="yes"/>
+<pinref part="U1" gate="G$1" pin="D14"/>
+</segment>
+</net>
+<net name="PIN_27" class="0">
+<segment>
+<wire x1="53.34" y1="58.42" x2="55.88" y2="58.42" width="0.1524" layer="91"/>
+<label x="55.88" y="58.42" size="1.016" layer="95" xref="yes"/>
+<pinref part="RT2" gate="G$1" pin="VOUT"/>
+</segment>
+<segment>
+<wire x1="-30.48" y1="-17.78" x2="-27.94" y2="-17.78" width="0.1524" layer="91"/>
+<label x="-27.94" y="-17.78" size="1.016" layer="95" xref="yes"/>
+<pinref part="U1" gate="G$1" pin="D27"/>
+</segment>
+</net>
+<net name="PIN_2" class="0">
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
 <wire x1="76.2" y1="60.96" x2="73.66" y2="60.96" width="0.1524" layer="91"/>
@@ -8892,9 +8841,26 @@ Source: &lt;a href="https://datasheet.datasheetarchive.com/originals/distributor
 <label x="73.66" y="60.96" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="-71.12" y1="-17.78" x2="-73.66" y2="-17.78" width="0.1524" layer="91"/>
-<label x="-73.66" y="-17.78" size="1.016" layer="95" rot="R180" xref="yes"/>
-<pinref part="U1" gate="G$1" pin="D13"/>
+<wire x1="-60.96" y1="-7.62" x2="-63.5" y2="-7.62" width="0.1524" layer="91"/>
+<label x="-63.5" y="-7.62" size="1.016" layer="95" rot="R180" xref="yes"/>
+<pinref part="U1" gate="G$1" pin="D2"/>
+</segment>
+</net>
+<net name="V_LM35" class="0">
+<segment>
+<pinref part="RT1" gate="G$1" pin="VS+"/>
+<wire x1="20.32" y1="60.96" x2="22.86" y2="60.96" width="0.1524" layer="91"/>
+<label x="22.86" y="60.96" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="RT2" gate="G$1" pin="VS+"/>
+<wire x1="53.34" y1="60.96" x2="55.88" y2="60.96" width="0.1524" layer="91"/>
+<label x="55.88" y="60.96" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="VIN"/>
+<wire x1="-60.96" y1="15.24" x2="-63.5" y2="15.24" width="0.1524" layer="91"/>
+<label x="-63.5" y="15.24" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
