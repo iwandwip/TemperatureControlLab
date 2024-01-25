@@ -1,5 +1,6 @@
 #include "Arduino.h"
 #include "tclab_v2_utils.h"
+#include "PWM.h"
 
 // global variables
 char Buffer[64];          // buffer for parsing serial input
@@ -48,18 +49,24 @@ void systemTest() {
   Serial.print(readTemperature(pinT1));
   Serial.print("| pinT2: ");
   Serial.print(readTemperature(pinT2));
-  // Serial.print("| pinT3(A1): ");
-  // Serial.print(readTemperature(A1));
-  // Serial.print("| pinT4(A3): ");
-  // Serial.print(readTemperature(A3));
-  // Serial.print("| pinT5(A4): ");
-  // Serial.print(readTemperature(A4));
   Serial.print("| pinLED1: ");
   Serial.print(digitalRead(pinLED1));
 
-  analogWrite(pinQ1, 255);
-  analogWrite(pinQ2, 255);
-  analogWrite(pinLED1, 255);
+  // analogWrite(pinQ1, 255);
+  // analogWrite(pinQ2, 255);
+  // analogWrite(pinLED1, 255);
+
+  // pwmWrite(pinQ1, 127);
+  // pwmWrite(pinQ2, 127);
+  // pwmWrite(pinLED1, 127);
+
+  // static int brightness = 0;
+  // static int fadeAmount = 5;
+  // pwmWrite(pinLED1, brightness);
+  // brightness = brightness + fadeAmount;
+  // if (brightness == 0 || brightness == 255) {
+  //   fadeAmount = -fadeAmount;
+  // }
 
   Serial.println();
 

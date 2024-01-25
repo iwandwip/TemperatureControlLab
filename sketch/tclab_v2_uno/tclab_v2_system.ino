@@ -2,10 +2,13 @@
  * The pin parameter is the pin number which must be capable of generating PWM signal.
  * For Arduino Nano or Arduino UNO the PWM pins are 3,5,6,9,10 and 11.
  * The pins 3, 9, 10 and 11 generates PWM frequency of 490Hz and pins 5 and 6 generates PWM frequency of 980Hz. "
+ * reference: https://www.electronicwings.com/users/sanketmallawat91/projects/215/frequency-changing-of-pwm-pins-of-arduino-uno
+ *          : https://code.google.com/archive/p/arduino-pwm-frequency-library/downloads
  */
 
 #define ADC_VREF_mV 5000.0     // in millivolt
 #define ADC_RESOLUTION 1024.0  // adc resolution
+#define PWM_FREQUENCY 5        // pwm freq
 
 // return average  of n reads of thermister temperature in °C
 inline float readTemperature(int pin) {
@@ -72,9 +75,18 @@ void systemInit() {
   pinMode(pinT1, INPUT);
   pinMode(pinT2, INPUT);
 
-  pinMode(pinQ1, OUTPUT);
-  pinMode(pinQ2, OUTPUT);
-  pinMode(pinLED1, OUTPUT);
+  // pinMode(pinQ1, OUTPUT);
+  // pinMode(pinQ2, OUTPUT);
+  // pinMode(pinLED1, OUTPUT);
+
+  // InitTimersSafe();
+  // bool successQ1 = SetPinFrequencySafe(pinQ1, 5);
+  // if (!successQ1) return false;
+  // bool successQ2 = SetPinFrequencySafe(pinQ2, 5);
+  // if (!successQ2) return false;
+  // bool successLED1 = SetPinFrequencySafe(pinLED1, 5);
+  // if (!successLED1) return false;
+  // return true;
 }
 
 void analogWritePWM(uint8_t ch, int dutyCycle) {
