@@ -75,9 +75,9 @@ void systemInit() {
   pinMode(pinT1, INPUT);
   pinMode(pinT2, INPUT);
 
-  // pinMode(pinQ1, OUTPUT);
-  // pinMode(pinQ2, OUTPUT);
-  // pinMode(pinLED1, OUTPUT);
+  pinMode(pinQ1, OUTPUT);
+  pinMode(pinQ2, OUTPUT);
+  pinMode(pinLED1, OUTPUT);
 
   // InitTimersSafe();
   // bool successQ1 = SetPinFrequencySafe(pinQ1, 5);

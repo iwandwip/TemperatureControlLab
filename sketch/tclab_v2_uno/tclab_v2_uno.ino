@@ -34,14 +34,14 @@ void setup() {
 
 // arduino main event loop
 void loop() {
-  systemTest();
+  // systemTest();
 
-  // readCommand();
-  // if (DEBUG) echoCommand();
-  // parseCommand();
-  // dispatchCommand();
-  // checkAlarm();
-  // updateStatus();
+  readCommand();
+  if (DEBUG) echoCommand();
+  parseCommand();
+  dispatchCommand();
+  checkAlarm();
+  updateStatus();
 }
 
 void systemTest() {
