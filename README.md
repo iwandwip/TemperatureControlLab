@@ -1,2 +1,2 @@
-# kompen-poltek
-kompen dulu ges
+# Temperature Control Lab - AP Monitor
+The temperature control lab is an application of feedback control with an Arduino, an LED, two heaters, and two temperature sensors. The heater power output is adjusted to maintain a desired temperature setpoint. Thermal energy from the heater is transferred by conduction, convection, and radiation to the temperature sensor. Heat is also transferred away from the device to the surroundings.
